@@ -1,15 +1,8 @@
-# cra-template
+# console
 
-> 기본적인 프로젝트 구조와 모듈이 설치되어있는 템플릿입니다. \
-> 프로젝트 시작할 때마다 귀찮아서 만든 템플릿.
+> YCHAL CLOUD WEB CONSOLE
 
-## 추가한 주요 모듈 리스트
-
-- customize-cra
-- @emotion/core
-- @emotion/css
-- @emotion/styled
-- @loadable/component
-- react-app-rewired
-- react-router
-- typescript
+## Developer
+- 최대한 유지보수는 제가 할 예정이나 다른 분이 맡으실 수도 있으니 연락처 남겨둡니다.
+- 궁금하신 점 있다면 아래의 연락처로 연락주세요.
+> 이승민 / 010-6662-6345 / lee@seungmin.io
