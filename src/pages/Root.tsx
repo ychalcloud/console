@@ -1,65 +1,103 @@
-import React from 'react';
-import logo from '../assets/logo.svg';
-import css from '@emotion/css';
-import { keyframes } from '@emotion/core';
-
-const Container = css`
-  text-align: center;
-`;
-
-const AppLogoSpin = keyframes`
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  `;
-
-const AppLogo = css`
-  height: 40vmin;
-  pointer-events: none;
-  @media (prefers-reduced-motion: no-preference) {
-    animation: ${AppLogoSpin} infinite 20s linear;
-  }
-`;
-
-const AppHeader = css`
-  @media (prefers-reduced-motion: no-preference) {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-`;
-
-const AppLink = css`
-  color: #61dafb;
-`;
+import React from "react";
+import styled from "@emotion/styled";
+import Logo from "../assets/logo.svg";
 
 const Root: React.FC = () => {
   return (
-    <div css={Container}>
-      <header css={AppHeader}>
-        <img src={logo} css={AppLogo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          css={AppLink}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <LoginBox>
+        <LogoImg src={Logo} />
+        <InputContainer>
+          <InputWrap>
+            <InputLabel>이메일</InputLabel>
+            <Input placeholder="support@acloudplatform.com"/>
+          </InputWrap>
+          <InputWrap>
+            <InputLabel>비밀번호</InputLabel>
+            <Input placeholder="P@ssw0rd!" />
+          </InputWrap>
+        </InputContainer>
+        <LoginButton>로그인</LoginButton>
+        <Button>회원가입</Button>
+        <EctButton>비밀번호 찾기</EctButton>
+      </LoginBox>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LoginBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+`;
+
+const LogoImg = styled.img`
+  width: 90%;
+  margin-bottom: 70px;
+`;
+
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+`;
+
+const InputWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+`;
+
+const InputLabel = styled.span`
+  font-size: 16px;
+  margin-bottom: 10px;
+`;
+
+const Input = styled.input`
+  font-size: 24px;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid rgb(180, 180, 180);
+  padding: 8px 0;
+  transition: border-color 0.2s linear;
+  & :focus {
+    border-color: black;
+  }
+`;
+
+const Button = styled.button`
+  width: 100%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: white;
+`;
+
+const LoginButton = styled(Button)`
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+`;
+
+const EctButton = styled.a`
+  color: rgb(100, 100, 100);
+  text-align: center;
+  margin-top: 20px;
+`;
 
 export default Root;
