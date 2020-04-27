@@ -5,9 +5,10 @@ export const Button = styled.button`
   border: 0;
   outline: 0;
   cursor: pointer;
-  padding: 10px;
-  border: 2px solid black;
-  background-color: white;
+  padding: 13px 15px;
+  border-radius: 5px;
+  background-color: #b45bff;
+  color: white;
 `;
 
 export const BigButton = styled(Button)`
@@ -16,13 +17,21 @@ export const BigButton = styled(Button)`
 `;
 
 export const LoginButton = styled(BigButton)`
-  background-color: black;
-  color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 export const TextButton = styled.a`
   color: rgb(100, 100, 100);
   text-align: center;
   margin-top: 20px;
+`;
+
+export const TextButtonWrap = styled.div`
+  display: flex;
+  * {
+    margin-right: 10px;
+  }
+  *: last-child {
+    margin-right: 0;
+  }
 `;

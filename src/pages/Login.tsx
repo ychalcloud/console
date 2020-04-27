@@ -1,15 +1,26 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/re-logo.svg";
 
-import { BigButton, LoginButton, TextButton } from "../components/Button";
-import { InputContainer, InputWrap, InputLabel, BigInput } from "../components/Input"
+import {
+  BigButton,
+  LoginButton,
+  TextButton,
+  TextButtonWrap
+} from "../components/Button";
+import {
+  InputContainer,
+  InputWrap,
+  InputLabel,
+  BigInput
+} from "../components/Input";
 
 const Login: React.FC = () => {
   return (
     <Container>
       <LoginBox>
-        <LogoImg src={Logo} />
+        {/*<LogoImg src={Logo} />*/}
+        <Header>콘솔 로그인</Header>
         <InputContainer>
           <InputWrap>
             <InputLabel>이메일</InputLabel>
@@ -17,12 +28,14 @@ const Login: React.FC = () => {
           </InputWrap>
           <InputWrap>
             <InputLabel>비밀번호</InputLabel>
-            <BigInput placeholder="P@ssw0rd!" />
+            <BigInput placeholder="P@ssw0rd!" type="password"/>
           </InputWrap>
         </InputContainer>
         <LoginButton>로그인</LoginButton>
-        <BigButton>회원가입</BigButton>
-        <TextButton>비밀번호 찾기</TextButton>
+        <TextButtonWrap>
+          <TextButton>회원가입</TextButton>
+          <TextButton>비밀번호 찾기</TextButton>
+        </TextButtonWrap>
       </LoginBox>
     </Container>
   );
@@ -36,6 +49,11 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Header = styled.h1`
+  font-size: 36px;
+  margin-bottom: 70px;
+`;
+
 const LoginBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,10 +63,8 @@ const LoginBox = styled.div`
 `;
 
 const LogoImg = styled.img`
-  width: 90%;
+  width: 70%;
   margin-bottom: 70px;
 `;
-
-
 
 export default Login;
