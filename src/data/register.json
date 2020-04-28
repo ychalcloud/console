@@ -1,0 +1,42 @@
+[
+  {
+    "id": "name",
+    "name": "이름",
+    "type": "text"
+  },
+  {
+    "id": "gender",
+    "name": "성별",
+    "type": "select",
+    "option": [
+      {
+        "id": "male",
+        "name": "남성"
+      },
+      {
+        "id": "female",
+        "name": "여성"
+      }
+    ]
+  },
+  {
+    "id": "phone",
+    "name": "전화번호",
+    "type": "text"
+  },
+  {
+    "id": "email",
+    "name": "이메일",
+    "type": "email"
+  },
+  {
+    "id": "password",
+    "name": "비밀번호",
+    "type": "password"
+  },
+  {
+    "id": "re-password",
+    "name": "비밀번호 확인",
+    "type": "password"
+  }
+]
