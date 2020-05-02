@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Spoqa Han Sans', sans-serif;
+  font-family: "Spoqa Han Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8,4 +8,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.service-wrapper-active-menu::after {
+  opacity: 1 !important;
+}
+
+.canvasjs-chart-credit {
+  display: none;
 }
