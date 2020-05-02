@@ -29,7 +29,7 @@ export const Input = styled.input`
   transition: border-color 0.2s linear;
   & :focus {
     border-width: 2px;
-    border-color: #b45bff;
+    border-color: #7c2ce4;
   }
 `;
 
@@ -44,7 +44,7 @@ export const Select = styled.select`
   outline: 0;
   border: 1px solid rgb(180, 180, 180);
   padding: 13px 15px;
-   appearance: none;
+  appearance: none;
   border-radius: 5px;
   transition: border-color 0.2s linear;
   & :focus {
