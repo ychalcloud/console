@@ -11,6 +11,8 @@ import {
   Dashboard
 } from "../pages";
 
+import Main from "../router/main";
+
 const App: React.FC = () => (
   <BrowserRouter>
     <Switch>
@@ -18,9 +20,7 @@ const App: React.FC = () => (
       <Route exact path="/auth/login" component={Login} />
       <Route exact path="/auth/register" component={Register} />
       <Route exact path="/auth/info" component={MyInfo} />
-      <Route exact path="/dashboard" component={Dashboard} />
-      <Route exact path="/instance" component={Instance} />
-      <Route exact path="/billing" component={Billing} />
+      <Route path="/main" component={Main} />
     </Switch>
   </BrowserRouter>
 );

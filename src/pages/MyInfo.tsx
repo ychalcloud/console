@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceWrapper from "../components/ServiceWrapper";
+import ServiceWrapper2 from "../components/ServiceWrapper";
 
 import {
   PageHeader,
@@ -12,7 +12,7 @@ import { AiOutlineUser } from "react-icons/ai";
 
 const MyInfo: React.FC = () => {
   return (
-    <ServiceWrapper>
+    <>
       <PageHeader>
         <IconWrap>
           <AiOutlineUser color="white" size={70} />
@@ -24,7 +24,7 @@ const MyInfo: React.FC = () => {
           정보 확인 혹은 변경 중 생기는 문제는 카카오톡 플러스친구 @에이클라우드플랫폼 으로 연락주세요.
         </DescriptionText>
       </PageHeader>
-    </ServiceWrapper>
+    </>
   );
 };
 

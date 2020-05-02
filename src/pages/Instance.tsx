@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceWrapper from "../components/ServiceWrapper";
+import ServiceWrapper2 from "../components/ServiceWrapper2";
 
 import {
   PageHeader,
@@ -12,7 +12,7 @@ import { AiOutlineCloudServer } from "react-icons/ai";
 
 const Instance: React.FC = () => {
   return (
-    <ServiceWrapper>
+    <>
       <PageHeader>
         <IconWrap>
           <AiOutlineCloudServer color="white" size={70} />
@@ -23,7 +23,7 @@ const Instance: React.FC = () => {
           에이클라우드플랫폼만의 차별화된 디도스 보안존을 누려보세요.
         </DescriptionText>
       </PageHeader>
-    </ServiceWrapper>
+    </>
   );
 };
 

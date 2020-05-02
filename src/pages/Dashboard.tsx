@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <ServiceWrapper2>
+    <>
       <TopCardContainer>
         <TopCard>
           <AiOutlineCloudServer size={50} css={iconCss} color="#7c2ce4"/>
@@ -209,7 +209,7 @@ const Dashboard: React.FC = () => {
           </DashboardCard>
         </DashboardCardWrap>
       </DashboardCardContainer>
-    </ServiceWrapper2>
+    </>
   );
 };
 

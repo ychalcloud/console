@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceWrapper from "../components/ServiceWrapper";
+import ServiceWrapper2 from "../components/ServiceWrapper2";
 
 import {
   PageHeader,
@@ -12,7 +12,7 @@ import styled from "@emotion/styled";
 
 const Billing: React.FC = () => {
   return (
-    <ServiceWrapper>
+    <>
       <PageHeader>
         <IconWrap>
           <AiOutlineCreditCard color="white" size={70} />
@@ -25,7 +25,7 @@ const Billing: React.FC = () => {
         </DescriptionText>
       </PageHeader>
       <PageContent></PageContent>
-    </ServiceWrapper>
+    </>
   );
 };
 

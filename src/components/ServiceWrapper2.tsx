@@ -18,50 +18,62 @@ import css from "@emotion/css";
 
 const ServiceWrapper2: React.FC = ({ children }) => {
   return (
-    <Container>
+    <>
+      <MenuContainer>
+        <LogoContentWrap>
+          <LogoWrap>
+            <LogoImg src={Logo} />
+          </LogoWrap>
+        </LogoContentWrap>
+        <MenuContentWithoutPadding>
+          <MenuButton>
+            <span>Customer Center</span> <MdCall size={25} />
+          </MenuButton>
+        </MenuContentWithoutPadding>
+        <MenuContentsWrap>
+          <Menu
+            to="/main/dashboard"
+            activeClassName="service-wrapper-active-menu"
+          >
+            <AiFillAppstore size={25} css={MenuIcon} />
+            <MenuLabel>Dashboard</MenuLabel>
+          </Menu>
+        </MenuContentsWrap>
+        <MenuContentsWrap>
+          <Menu
+            to="/main/instance"
+            activeClassName="service-wrapper-active-menu"
+          >
+            <AiFillCloud size={25} css={MenuIcon} />
+            <MenuLabel>Instance</MenuLabel>
+          </Menu>
+        </MenuContentsWrap>
+        <MenuContentsWrap>
+          <Menu
+            to="/main/billing"
+            activeClassName="service-wrapper-active-menu"
+          >
+            <AiFillCreditCard size={25} css={MenuIcon} />
+            <MenuLabel>Billing</MenuLabel>
+          </Menu>
+        </MenuContentsWrap>
+        <MenuContentsWrap>
+          <Menu
+            to="/main/auth/info"
+            activeClassName="service-wrapper-active-menu"
+          >
+            <FaUser size={25} css={MenuIcon} />
+            <MenuLabel>My Info</MenuLabel>
+          </Menu>
+        </MenuContentsWrap>
+        <BottomMenuWrap>
+          <BottomMenu>이용 약관</BottomMenu>
+          <BottomMenu>개인 정보 처리 방침</BottomMenu>
+          <br />
+          <BottomMenu>ⓒ A Cloud Platform. All rights reserved.</BottomMenu>
+        </BottomMenuWrap>
+      </MenuContainer>
       <BodyContainer>
-        <MenuContainer>
-          <LogoContentWrap>
-            <LogoWrap>
-              <LogoImg src={Logo} />
-            </LogoWrap>
-          </LogoContentWrap>
-          <MenuContentWithoutPadding>
-            <MenuButton>
-              <span>Customer Center</span> <MdCall size={25} />
-            </MenuButton>
-          </MenuContentWithoutPadding>
-          <MenuContentsWrap>
-            <Menu to="/dashboard" activeClassName="service-wrapper-active-menu">
-              <AiFillAppstore size={25} css={MenuIcon} />
-              <MenuLabel>Dashboard</MenuLabel>
-            </Menu>
-          </MenuContentsWrap>
-          <MenuContentsWrap>
-            <Menu to="/instance" activeClassName="service-wrapper-active-menu">
-              <AiFillCloud size={25} css={MenuIcon} />
-              <MenuLabel>Instance</MenuLabel>
-            </Menu>
-          </MenuContentsWrap>
-          <MenuContentsWrap>
-            <Menu to="/billing" activeClassName="service-wrapper-active-menu">
-              <AiFillCreditCard size={25} css={MenuIcon} />
-              <MenuLabel>Billing</MenuLabel>
-            </Menu>
-          </MenuContentsWrap>
-          <MenuContentsWrap>
-            <Menu to="/auth/info" activeClassName="service-wrapper-active-menu">
-              <FaUser size={25} css={MenuIcon} />
-              <MenuLabel>My Info</MenuLabel>
-            </Menu>
-          </MenuContentsWrap>
-          <BottomMenuWrap>
-            <BottomMenu>이용 약관</BottomMenu>
-            <BottomMenu>개인 정보 처리 방침</BottomMenu>
-            <br />
-            <BottomMenu>ⓒ A Cloud Platform. All rights reserved.</BottomMenu>
-          </BottomMenuWrap>
-        </MenuContainer>
         <Body>
           <Header>
             <HeaderContentWrap>
@@ -78,17 +90,9 @@ const ServiceWrapper2: React.FC = ({ children }) => {
           {children}
         </Body>
       </BodyContainer>
-    </Container>
+    </>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-`;
 
 const Header = styled.div`
   display: flex;
@@ -119,13 +123,21 @@ const LogoImg = styled.img`
 const BodyContainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin-left: 300px;
 `;
 
 const MenuContainer = styled.div`
   display: flex;
+  position: fixed;
   flex-direction: column;
   width: 300px;
+  height: 100%;
   align-items: center;
+  background-color: white;
+  z-index: 300;
 `;
 
 const MenuContentsWrap = styled.div`
