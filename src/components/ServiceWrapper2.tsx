@@ -59,7 +59,7 @@ const ServiceWrapper2: React.FC = ({ children }) => {
         </MenuContentsWrap>
         <MenuContentsWrap>
           <Menu
-            to="/main/auth/info"
+            to="/auth/info"
             activeClassName="service-wrapper-active-menu"
           >
             <FaUser size={25} css={MenuIcon} />
@@ -75,18 +75,18 @@ const ServiceWrapper2: React.FC = ({ children }) => {
       </MenuContainer>
       <BodyContainer>
         <Body>
-          <Header>
-            <HeaderContentWrap>
-              <ProfileWrap>
-                <ProfileImg src="https://picsum.photos/500/500" />
-                <ProfileInfoWrap>
-                  <ProfileName>이승민</ProfileName>
-                  <ProfileInfo>lee@seungmin.io</ProfileInfo>
-                </ProfileInfoWrap>
-                <FiChevronDown size={20} color="#72798B" />
-              </ProfileWrap>
-            </HeaderContentWrap>
-          </Header>
+          {/*<Header>*/}
+          {/*  <HeaderContentWrap>*/}
+          {/*    <ProfileWrap>*/}
+          {/*      <ProfileImg src="https://picsum.photos/500/500" />*/}
+          {/*      <ProfileInfoWrap>*/}
+          {/*        <ProfileName>이승민</ProfileName>*/}
+          {/*        <ProfileInfo>lee@seungmin.io</ProfileInfo>*/}
+          {/*      </ProfileInfoWrap>*/}
+          {/*      <FiChevronDown size={20} color="#72798B" />*/}
+          {/*    </ProfileWrap>*/}
+          {/*  </HeaderContentWrap>*/}
+          {/*</Header>*/}
           {children}
         </Body>
       </BodyContainer>
@@ -120,15 +120,6 @@ const LogoImg = styled.img`
   height: fit-content;
 `;
 
-const BodyContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  margin-left: 300px;
-`;
-
 const MenuContainer = styled.div`
   display: flex;
   position: fixed;
@@ -138,6 +129,7 @@ const MenuContainer = styled.div`
   align-items: center;
   background-color: white;
   z-index: 300;
+  border-right: 1px solid #f5f6fa;
 `;
 
 const MenuContentsWrap = styled.div`
@@ -210,11 +202,20 @@ const MenuButton = styled.button`
   cursor: pointer;
 `;
 
+const BodyContainer = styled.div`
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 100%;
+  margin-left: 300px;
+`;
+
 const Body = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f5f6fa;
-  width: calc(100% - 300px);
   min-height: 100vh;
 `;
 

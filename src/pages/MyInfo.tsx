@@ -5,7 +5,7 @@ import {
   PageHeader,
   IconWrap,
   HeaderText,
-  DescriptionText
+  DescriptionText, DescriptionHeaderText
 } from "../components/PageHeader";
 
 import { AiOutlineUser } from "react-icons/ai";
@@ -15,9 +15,12 @@ const MyInfo: React.FC = () => {
     <>
       <PageHeader>
         <IconWrap>
-          <AiOutlineUser color="white" size={70} />
+          <AiOutlineUser color="black" size={70} />
         </IconWrap>
         <HeaderText>My Info</HeaderText>
+        <DescriptionHeaderText>
+          빠르게 생성하여 원하는 분야에 효율적으로 활용하는 서버
+        </DescriptionHeaderText>
         <DescriptionText>
           에이클라우드플랫폼에 안전하게 저장되어 있는 고객님의 정보입니다.
           <br />
