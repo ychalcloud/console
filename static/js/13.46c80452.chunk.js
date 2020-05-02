@@ -1,2 +1,0 @@
-(this["webpackJsonpacloudplatform-console"]=this["webpackJsonpacloudplatform-console"]||[]).push([[13],{399:function(l,t,c){"use strict";c.r(t);c(0);var n=c(76),o=c(62),b=c(2),e=c(4);t.default=function(){return Object(e.b)(n.a,null,Object(e.b)(o.d,null,Object(e.b)(o.b,null,"MAINPAGE")),Object(e.b)(b.a,{to:"/billing"}))}}}]);
-//# sourceMappingURL=13.46c80452.chunk.js.map

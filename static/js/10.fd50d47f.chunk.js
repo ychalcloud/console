@@ -1,0 +1,2 @@
+(this["webpackJsonpacloudplatform-console"]=this["webpackJsonpacloudplatform-console"]||[]).push([[10],{400:function(o,t,a){"use strict";a.r(t);a(1);var c=a(5),s=a(2);t.default=function(){return Object(s.b)(c.a,{to:"/dashboard"})}}}]);
+//# sourceMappingURL=10.fd50d47f.chunk.js.map
